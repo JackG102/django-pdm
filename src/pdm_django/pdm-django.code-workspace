@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"name": "pdm-django",
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}

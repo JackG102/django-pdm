@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:8f2b91d6b111e8b4224aa3fdaf74bd878033feaebde19caded38824ff2872dc5"
+content_hash = "sha256:770246428dac08e33b3ce702bb18a9c280fe3d0f8254eb4ab8ec16c2de4a1af3"
 
 [[package]]
 name = "asgiref"
@@ -32,6 +32,35 @@ dependencies = [
 files = [
     {file = "Django-5.0.1-py3-none-any.whl", hash = "sha256:f47a37a90b9bbe2c8ec360235192c7fddfdc832206fcf618bb849b39256affc1"},
     {file = "Django-5.0.1.tar.gz", hash = "sha256:8c8659665bc6e3a44fefe1ab0a291e5a3fb3979f9a8230be29de975e57e8f854"},
+]
+
+[[package]]
+name = "django-ckeditor"
+version = "6.7.0"
+requires_python = ">=3.8"
+summary = "Django admin CKEditor integration."
+groups = ["default"]
+dependencies = [
+    "Django>=3.2",
+    "django-js-asset>=2.0",
+]
+files = [
+    {file = "django-ckeditor-6.7.0.tar.gz", hash = "sha256:0489f7a6ae93360d328f77cea17c04891103cbdfa6c962af386bbe47e811671b"},
+    {file = "django_ckeditor-6.7.0-py3-none-any.whl", hash = "sha256:73399fb8f56f565e7519b57adbd7c585623db2cdc8c75666f56918d3eecf7906"},
+]
+
+[[package]]
+name = "django-js-asset"
+version = "2.2.0"
+requires_python = ">=3.8"
+summary = "script tag with additional attributes for django.forms.Media"
+groups = ["default"]
+dependencies = [
+    "django>=3.2",
+]
+files = [
+    {file = "django_js_asset-2.2.0-py3-none-any.whl", hash = "sha256:7ef3e858e13d06f10799b56eea62b1e76706f42cf4e709be4e13356bc0ae30d8"},
+    {file = "django_js_asset-2.2.0.tar.gz", hash = "sha256:0c57a82cae2317e83951d956110ce847f58ff0cdc24e314dbc18b35033917e94"},
 ]
 
 [[package]]
