@@ -18,6 +18,7 @@ license = {text = "MIT"}
 package-type = "application"
 
 [tool.pdm.scripts]
+ckeditor_static = "./manage.py collectstatic"
 django_init = "django-admin startproject blog"
 django_migrate = "python manage.py migrate"
 django_start = "python manage.py runserver"
