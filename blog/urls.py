@@ -22,6 +22,6 @@ app_name = 'blog'
 urlpatterns = [
     path(f"{app_name}/", views.BlogIndexView.as_view(), name="index"),
     path(f"{app_name}/<int:pk>/", views.BlogDetailView.as_view(), name="detail"),
-    path(f"{app_name}/<slug:slug>/", views.BlogDetailView.as_view(), name="detail"),
+    path(f"{app_name}/<slug:slug>/", views.BlogDetailView.as_view(), name="detail-slug"),
     path('admin/', admin.site.urls),
 ]
