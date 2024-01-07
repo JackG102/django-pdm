@@ -2,7 +2,7 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 # Define Blog Models Here
-class Blog:
+class Blog((models.Model)):
   # Title
   title = models.CharField(max_length=200)
   # Date Published
