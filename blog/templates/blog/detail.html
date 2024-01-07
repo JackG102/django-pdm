@@ -1,5 +1,9 @@
+{% extends "base.html" %}
+
+{% block content%}
 <h1>{{ blog.title}}</h1>
 <span>{{ blog.pub_date }}</span>
 <body>
   {{ blog.body|safe }}
 </body>
+{% endblock content%}
