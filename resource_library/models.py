@@ -19,6 +19,6 @@ class Resource(models.Model):
     "website": "Website",
     "book": "Book"
   }
-  type = models.CharField(max_length=1, choices=RESOURCE_TYPES)
+  type = models.CharField(choices=RESOURCE_TYPES, max_length=50)
   # Date Published
   pub_date = models.DateField("date published")

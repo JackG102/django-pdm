@@ -1,10 +1,5 @@
 from django.contrib import admin
+from .models import Resource
 
 # Register your models here.
-
-# What shouldd our Resource model have?
-# Title
-# Link
-# Slug
-# Author
-# Resource Type
+admin.site.register(Resource)
