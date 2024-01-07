@@ -8,7 +8,7 @@ class Blog:
   # Date Published
   pub_date = models.DateField("date published")
   # Body
-  body = models.TextField()
+  body = RichTextField()
   # Slug
   slug = models.SlugField(unique=True, max_length=200, verbose_name="Slug")
 
