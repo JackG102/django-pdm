@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Resource Library</h1>
+<ul>
+  {% for resource in resource_library %}
+    <li><a href="{% url 'detail-slug' resource.slug %}">{{ resource.title }} </a></li>
+  {% endfor %}
+</ul>
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; First</a>
+            <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock content %}

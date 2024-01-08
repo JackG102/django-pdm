@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content%}
+<h1>{{ resource.title}}</h1>
+<span>by {{ resource.author }} on {{ resource.pub_date }}</span>
+<div>
+  <span>Resource Type: {{ resource.type }}</span>
+</div>
+<body>
+  {{ resource.body|safe }}
+</body>
+{% endblock content%}

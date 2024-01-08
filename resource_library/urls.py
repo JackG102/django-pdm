@@ -1,5 +1,5 @@
 """
-URL configuration for blog project.
+URL configuration for Resource Library App.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -15,14 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from . import views
 
-app_name = 'blog'
 urlpatterns = [
-    path(f"{app_name}/", views.BlogIndexView.as_view(), name="index"),
-    path(f"{app_name}/<int:pk>/", views.BlogDetailView.as_view(), name="detail"),
-    path(f"{app_name}/<slug:slug>/", views.BlogDetailView.as_view(), name="detail-slug"),
-    path('resource-library/', include('resource_library.urls')),
-    path('admin/', admin.site.urls),
+    path("", views.ResourceIndexView.as_view(), name="resource_library_index"),
+    path("<int:pk>/", views.ResourceDetailView.as_view(), name="resource"),
+    path("<slug:slug>/", views.ResourceDetailView.as_view(), name="resource-slug"),
 ]

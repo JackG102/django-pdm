@@ -5,7 +5,7 @@ from .models import Resource
 # Define Blog views
 class ResourceDetailView(generic.DetailView):
   model = Resource
-  template_name = "resource_libary/detail.html"
+  template_name = "resource_library/detail.html"
 
 class ResourceIndexView(generic.ListView):
   model = Resource
