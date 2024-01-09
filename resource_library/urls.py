@@ -19,7 +19,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.ResourceIndexView.as_view(), name="resource_library_index"),
+    path('', views.resource_library, name="resource-library-index"),
     path("<int:pk>/", views.ResourceDetailView.as_view(), name="resource"),
     path("<slug:slug>/", views.ResourceDetailView.as_view(), name="resource-slug"),
 ]
